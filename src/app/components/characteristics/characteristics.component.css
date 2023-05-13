@@ -1,0 +1,93 @@
+p {
+    text-align: justify;
+}
+
+.wrapper {
+    
+    background-size: cover;  
+    background-color: rgb(21, 21, 21);     
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.div1 {
+    background: url('/assets/images/image1.jpg') no-repeat; 
+}
+
+.div2 {
+    
+}
+
+.div3 {
+
+}
+
+.content {
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+.reviews {
+    background: 
+ 
+    repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #ff4949 10px,
+        #ff4949 20px
+    ),
+ 
+    linear-gradient(
+        to bottom,
+        #7b0000,
+        #7b0000
+    );
+}
+
+#principal {
+    background: 
+ 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #000000 10px,
+            #000000 20px
+        ),
+     
+        linear-gradient(
+            to bottom,
+            #141414,
+            #141414
+        );
+}
+
+#quote {
+    margin: 30px;
+}
+
+#otros {
+    background: 
+ 
+    repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        lightgray 10px,
+        lightgray 20px
+    ),
+ 
+    linear-gradient(
+        to bottom,
+        #939393,
+        #939393
+    );
+}
+
+#trailers {
+    background-color: black;
+}

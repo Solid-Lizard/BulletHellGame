@@ -1,0 +1,82 @@
+body {
+    background: 
+ 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #000000 10px,
+            #000000 20px
+        ),
+     
+        linear-gradient(
+            to bottom,
+            #141414,
+            #141414
+        );
+    
+padding-top: 20px;
+
+}
+
+.redes-sociales {
+    text-align: center;
+    
+  }
+  
+  .redes-sociales h1 {
+    margin-bottom: 10px;
+    color: red;
+  }
+  
+  .redes-sociales-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+  }
+  
+  .red-social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: red;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .red-social-link img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .follow-text {
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .additional-content {
+    margin-top: 40px;
+    color: white
+  }
+  
+  .additional-content h2 {    
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .additional-content p {
+    margin-bottom: 10px;
+  }
+  
+  .additional-content ul {
+    text-align: left;
+    margin-left: 40px;
+  }
+  
+  .additional-content li {
+    margin-bottom: 5px;
+  }
+  

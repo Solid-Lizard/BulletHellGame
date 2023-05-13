@@ -1,0 +1,23 @@
+li:hover {
+    background-color: red;    
+    border: 1px solid red;
+    border-radius: 5px;    
+}
+
+li {
+    border: 1px solid transparent;
+    
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: black;   
+}
+
+header {
+    border-bottom: 1px solid red;
+    background-color: rgb(30, 29, 29);
+}
