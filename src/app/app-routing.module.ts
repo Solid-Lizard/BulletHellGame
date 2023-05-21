@@ -7,11 +7,14 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { RequerimentsComponent } from './components/requeriments/requeriments.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 const routes: Routes = [
   
   { path: 'download', component: DownloadGameComponent },
+  { path: 'contact', component: ContactFormComponent},
   { path: 'home', component: HomeComponent },
+  { path: '', component:HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'requirements', component: RequerimentsComponent },
   { path: 'social-media', component:  SocialMediaComponent},

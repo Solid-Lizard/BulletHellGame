@@ -1,0 +1,21 @@
+form {
+    margin: 70px;
+}
+
+form input {
+    max-width: 400px;
+}
+
+form textarea {
+    max-width: 600px;
+}
+
+label {
+    color: white;
+}
+
+.alert {
+    margin-top: 5px;
+    background-color: rgba(255, 0, 0, 0.584);
+    max-width: 400px;
+}
