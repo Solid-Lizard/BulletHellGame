@@ -25,16 +25,13 @@ constructor(private mailService: MailServiceService, private route:Router) {
     
     this.mailService.sendMail(this.mail).subscribe(
       (data: number) => {
-      localStorage.setItem('subject', this.mail.subject);
-      localStorage.setItem('text', this.mail.text);
+        this.route.navigate(['/BulletHellGame/message-success']);
    
       },
       (error: Error) => {
       console.error("Error al realizar el acceso");
       }
-      )
-    
-    this.route.navigate(['/BulletHellGame/message-success']);
+      )        
 
   }
 
