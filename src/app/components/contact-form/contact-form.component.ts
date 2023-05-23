@@ -25,7 +25,7 @@ constructor(private mailService: MailServiceService, private route:Router) {
     
     this.mailService.sendMail(this.mail).subscribe(
       (data: number) => {
-        this.route.navigate(['/BulletHellGame/message-success']);
+        this.route.navigate(['/message-success']);
    
       },
       (error: Error) => {
