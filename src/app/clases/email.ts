@@ -1,5 +1,5 @@
 export class Email {
-    public subject: String;
+    public subject: string;
     public text: string;
 
 constructor() {

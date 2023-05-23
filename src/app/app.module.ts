@@ -15,7 +15,8 @@ import { DownloadGameComponent } from './components/download-game/download-game.
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
-import { MesaggeSuccessComponent } from './componentes/mesagge-success/mesagge-success.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MessageSuccessComponent } from './components/message-success/message-success.component';
 
 
 @NgModule({
@@ -31,14 +32,15 @@ import { MesaggeSuccessComponent } from './componentes/mesagge-success/mesagge-s
     DownloadGameComponent,
     SocialMediaComponent,
     ContactFormComponent,
-    MesaggeSuccessComponent
+    MessageSuccessComponent,
   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

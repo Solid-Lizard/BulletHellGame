@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MesaggeSuccessComponent } from './mesagge-success.component';
+import { MessageSuccessComponent } from './message-success.component';
 
-describe('MesaggeSuccessComponent', () => {
-  let component: MesaggeSuccessComponent;
-  let fixture: ComponentFixture<MesaggeSuccessComponent>;
+describe('MessageSuccessComponent', () => {
+  let component: MessageSuccessComponent;
+  let fixture: ComponentFixture<MessageSuccessComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MesaggeSuccessComponent ]
+      declarations: [ MessageSuccessComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MesaggeSuccessComponent);
+    fixture = TestBed.createComponent(MessageSuccessComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

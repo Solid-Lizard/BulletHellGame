@@ -8,12 +8,14 @@ import { RequerimentsComponent } from './components/requeriments/requeriments.co
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { MessageSuccessComponent } from './components/message-success/message-success.component';
 
 const routes: Routes = [
   
   { path: 'download', component: DownloadGameComponent },
   { path: 'contact', component: ContactFormComponent},
   { path: 'home', component: HomeComponent },
+  { path: 'message-success', component:MessageSuccessComponent },
   { path: '', component:HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'requirements', component: RequerimentsComponent },

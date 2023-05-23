@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MailServiceService } from 'src/app/services/mail-service.service';
 import { Email } from 'src/app/clases/email';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +11,7 @@ import { Email } from 'src/app/clases/email';
 export class ContactFormComponent implements OnInit {
   public mail: Email;
 
-constructor() {
+constructor(private mailService: MailServiceService, private route:Router) {
   this.mail = new Email();
 }
 
@@ -20,38 +21,22 @@ constructor() {
 
   public submit(): void {
     console.log(this.mail.subject);
-    console.log(this.mail.text);
-  }
-
-  myFunc() {
-    console.log("boton presionado")
-  }
-
-  //constructor(private correoService: MailServiceService) {}
-
-  /*
-  enviarFormulario() {
-    const emailData = {
-      to: 'santi.lopar@gmail.com',
-      subject: this.asunto,
-      body: this.cuerpo
-    };
-
-    this.correoService.sendMail(emailData).subscribe(
-      response => {
-        console.log('Correo enviado correctamente');
-        // Restablecer los campos del formulario después de enviarlo
-        this.resetFormulario();
+    console.log(this.mail.text);  
+    
+    this.mailService.sendMail(this.mail).subscribe(
+      (data: number) => {
+      localStorage.setItem('subject', this.mail.subject);
+      localStorage.setItem('text', this.mail.text);
+   
       },
-      error => {
-        console.log('Error al enviar el correo', error);
+      (error: Error) => {
+      console.error("Error al realizar el acceso");
       }
-    );
+      )
+    
+    this.route.navigate(['/BulletHellGame/message-success']);
+
   }
 
-  resetFormulario() {
-    this.asunto = '';
-    this.cuerpo = '';
-  }
-  */
+
 }
