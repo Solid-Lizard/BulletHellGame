@@ -9,13 +9,14 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
 import { RouterModule, Routes } from '@angular/router';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { MessageSuccessComponent } from './components/message-success/message-success.component';
+import { MessageErrorComponent } from './components/message-error/message-error.component';
 
 const routes: Routes = [
-  
   { path: 'download', component: DownloadGameComponent },
   { path: 'contact', component: ContactFormComponent},
   { path: 'home', component: HomeComponent },
   { path: 'message-success', component:MessageSuccessComponent },
+  { path: 'message-error', component:MessageErrorComponent},
   { path: '', component:HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'requirements', component: RequerimentsComponent },

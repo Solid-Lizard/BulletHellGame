@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MessageSuccessComponent } from './components/message-success/message-success.component';
+import { MessageErrorComponent } from './components/message-error/message-error.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MessageSuccessComponent } from './components/message-success/message-su
     SocialMediaComponent,
     ContactFormComponent,
     MessageSuccessComponent,
+    MessageErrorComponent,
   
   ],
   imports: [

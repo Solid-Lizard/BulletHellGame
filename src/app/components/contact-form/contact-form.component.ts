@@ -20,16 +20,13 @@ constructor(private mailService: MailServiceService, private route:Router) {
   }
 
   public submit(): void {
-    console.log(this.mail.subject);
-    console.log(this.mail.text);  
-    
     this.mailService.sendMail(this.mail).subscribe(
       (data: number) => {
         this.route.navigate(['/message-success']);
    
       },
       (error: Error) => {
-      console.error("Error al realizar el acceso");
+        this.route.navigate(['/message-error']);
       }
       )        
 

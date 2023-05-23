@@ -1,0 +1,14 @@
+img {
+    height: 300px;
+    margin: 10px;
+}
+
+b {
+    color: red;
+}
+
+.body {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
