@@ -18,6 +18,9 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MessageSuccessComponent } from './components/message-success/message-success.component';
 import { MessageErrorComponent } from './components/message-error/message-error.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { NotPermissionsComponent } from './components/not-permissions/not-permissions.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { MessageErrorComponent } from './components/message-error/message-error.
     ContactFormComponent,
     MessageSuccessComponent,
     MessageErrorComponent,
+    LoginComponent,
+    SignupComponent,
+    NotPermissionsComponent,
   
   ],
   imports: [

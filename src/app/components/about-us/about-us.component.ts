@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-us.component.css']
 })
 export class AboutUsComponent implements OnInit {
-
-  constructor() { }
+  isLoggedIn = false;
+  
+  constructor() {
+    if (localStorage.getItem('isLoggedIn') == 'true') {
+      this.isLoggedIn = true;
+    } else {}
+      this.isLoggedIn = false;
+   }
 
   ngOnInit(): void {
   }

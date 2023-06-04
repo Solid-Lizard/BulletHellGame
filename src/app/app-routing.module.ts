@@ -10,11 +10,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { MessageSuccessComponent } from './components/message-success/message-success.component';
 import { MessageErrorComponent } from './components/message-error/message-error.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
   { path: 'download', component: DownloadGameComponent },
   { path: 'contact', component: ContactFormComponent},
   { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent},
+  { path: 'signup', component:SignupComponent},
   { path: 'message-success', component:MessageSuccessComponent },
   { path: 'message-error', component:MessageErrorComponent},
   { path: '', component:HomeComponent },

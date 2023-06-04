@@ -1,4 +1,26 @@
 
-<app-header></app-header>
+<header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/BulletHellGame/home" class="nav-link px-2">Principal</a></li>
+          <li><a href="/BulletHellGame/our-game" class="nav-link px-2 ">Características</a></li>
+          <li><a href="/BulletHellGame/requirements" class="nav-link px-2 ">Requisitos</a></li>
+          <li><a href="/BulletHellGame/download" class="nav-link px-2 " *ngIf="isLoggedIn">Descargar juego</a></li>
+          <li><a href="/BulletHellGame/about-us" class="nav-link px-2 " *ngIf="isLoggedIn">Sobre el equipo</a></li>
+          <li><a href="/BulletHellGame/social-media" class="nav-link px-2 ">¡Síguenos!</a></li>
+          <li><a href="/BulletHellGame/contact" class="nav-link px-2" *ngIf="isLoggedIn">¡Contáctanos!</a></li>
+        </ul>
+
+        <div class="text-end">
+          <a href="/BulletHellGame/login" class="btn btn-outline-light me-2" style="margin-right: 10px" *ngIf="!isLoggedIn">Login</a>
+          <a href="/BulletHellGame/signup" class="btn btn-danger" *ngIf="!isLoggedIn">Sign-up</a>
+          <a href class="btn btn-danger" (click)="logout()" *ngIf="isLoggedIn">LogOut</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
 <router-outlet></router-outlet>
 <app-footer></app-footer>

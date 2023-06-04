@@ -1,0 +1,19 @@
+
+h1 {
+    color: red;
+}
+
+h6{
+    color: red;
+    text-decoration: underline;
+}
+    
+body {
+    color: white;    
+    text-align: center;
+}
+
+img {
+    height: 300px;
+    margin: 10px;
+}

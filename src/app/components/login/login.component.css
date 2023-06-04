@@ -1,0 +1,22 @@
+* {
+    color: white;
+    text-align: center;
+}
+
+input {
+    color: black;
+}
+
+label {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 50px;
+}
+
+button, input {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}

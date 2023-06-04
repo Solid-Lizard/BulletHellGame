@@ -5,15 +5,21 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class MailServiceService {
 
-  private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
   private apiUrl = 'https://bullethellgame-back-production.up.railway.app/email';
-
+  //private apiUrl = 'http://localhost:8080/email';
+ 
   constructor(private http: HttpClient) { }
 
-  sendMail (emailData: any): Observable<any> {
-    return this.http.post(this.apiUrl, emailData);
+  sendMail (emailData: any): Observable<any> {    
+    const headers: HttpHeaders = new HttpHeaders()
+      .set('Authorization', 'Bearer ' + sessionStorage.getItem('auth-token'));
+
+      console.log(headers.get('Authorization'));
+
+    return this.http.post(this.apiUrl, emailData, {headers: headers});
+
   }
 }

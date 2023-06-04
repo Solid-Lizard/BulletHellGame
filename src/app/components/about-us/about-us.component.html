@@ -1,4 +1,4 @@
-  <div class="encabezado">
+  <div class="encabezado" *ngIf="isLoggedIn">
   <br>
 
     <p style="text-align: center; padding: 5px;">
@@ -11,7 +11,7 @@
         Bienvenidos a nuestro grupo de desarrollo formado por 6 personas. Nuestro equipo está formado por apasionados de los videojuegos y diseñadores que comparten la misma visión: crear juegos emocionantes y divertidos que brinden una experiencia de juego única y satisfactoria. Estamos muy emocionados de compartir este juego con todos ustedes y esperamos que lo disfruten tanto como nosotros disfrutamos creándolo. No dudes en enviarnos tus comentarios y sugerencias, ya que nos encantaría seguir mejorando y creando nuevos juegos emocionantes en el futuro. ¡Gracias por jugar y bienvenidos a nuestra comunidad!
     </p>
     </div>
-<body>
+<body *ngIf="isLoggedIn">
     <div id="principal">
         <div class="set1">
             <div style="width: 50%; float:left" class ="profile">
@@ -49,3 +49,5 @@
 
     
 </body>
+
+<app-not-permissions *ngIf="!isLoggedIn"></app-not-permissions>

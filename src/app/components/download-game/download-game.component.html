@@ -1,4 +1,4 @@
-<body>
+<body *ngIf="isLoggedIn">
     <div style="background-color: black; border-bottom: 1px solid red;">
         <br>
         <h1 style="text-align: center; padding: 5px;"> <b style="border-bottom: 2px solid red;"> Descargar e Instalar el Juego </b> </h1>
@@ -9,11 +9,11 @@
 
     <p style="margin-left: 30px;">Haz clic en el botón de descarga para obtener el juego:</p>
 
-    <a href="https://bullethellgame-back-production.up.railway.app/download" download="BulletHell.zip"> 
-        <button style="margin-left: 30px; margin-bottom: 30px;" class="btn btn-primary">
+    <!-- <a href="https://bullethellgame-back-production.up.railway.app/download" download="BulletHell.zip">  -->
+        <button (click)="downloadGame()" style="margin-left: 30px; margin-bottom: 30px;" class="btn btn-primary">
             Descargar juego
         </button> 
-    </a>
+    <!-- </a> -->
 
     <p style="margin-left: 30px;">Una vez descargado, tu navegador debería indicártelo de algún modo, o en su defecto, se te habrá descargado en tu carpeta de "descargas"</p>
     <img src="assets/images/descargas1.jpg" style="height: 300px; margin-left: 30px; margin-bottom: 40px;">
@@ -44,3 +44,5 @@
 
     <div style="visibility: hidden;">s</div>
 </body>
+
+<app-not-permissions *ngIf="!isLoggedIn"></app-not-permissions>
