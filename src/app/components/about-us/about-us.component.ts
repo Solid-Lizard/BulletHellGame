@@ -11,8 +11,10 @@ export class AboutUsComponent implements OnInit {
   constructor() {
     if (localStorage.getItem('isLoggedIn') == 'true') {
       this.isLoggedIn = true;
-    } else {}
+    } else {
       this.isLoggedIn = false;
+    }
+      
    }
 
   ngOnInit(): void {

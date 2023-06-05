@@ -10,9 +10,16 @@ import { Router } from '@angular/router';
 })
 export class ContactFormComponent implements OnInit {
   public mail: Email;
+  isLoggedIn = false;
 
 constructor(private mailService: MailServiceService, private route:Router) {
   this.mail = new Email();
+  
+  if (localStorage.getItem('isLoggedIn') == 'true') {
+    this.isLoggedIn = true;
+  } else {
+    this.isLoggedIn = false;
+  }
 }
 
   ngOnInit(): void {

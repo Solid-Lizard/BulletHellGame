@@ -21,6 +21,7 @@ import { MessageErrorComponent } from './components/message-error/message-error.
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NotPermissionsComponent } from './components/not-permissions/not-permissions.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NotPermissionsComponent } from './components/not-permissions/not-permis
     LoginComponent,
     SignupComponent,
     NotPermissionsComponent,
+    ProfileComponent,
   
   ],
   imports: [

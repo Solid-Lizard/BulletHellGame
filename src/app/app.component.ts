@@ -17,6 +17,9 @@ username?: string;
 constructor(private tokenStorageService: TokenStorageServiceService) { }
 ngOnInit(): void {
 this.isLoggedIn = !!this.tokenStorageService.getToken();
+if (localStorage.getItem('isLoggedIn')=='true') {
+  this.isLoggedIn=true;
+}
 if (this.isLoggedIn) {
 const user = this.tokenStorageService.getUser();
 this.roles = user.roles;

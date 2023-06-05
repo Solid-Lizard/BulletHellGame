@@ -1,4 +1,4 @@
-<div id="contenedor" class="form">
+<div *ngIf="isLoggedIn" id="contenedor" class="form">
 
   <form (ngSubmit)="submit()" #mailForm="ngForm">
     <div class="form-group">
@@ -33,3 +33,5 @@
 
 
 </div>
+
+<app-not-permissions *ngIf="!isLoggedIn"></app-not-permissions>
