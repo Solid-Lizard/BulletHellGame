@@ -12,6 +12,8 @@ import { MessageSuccessComponent } from './components/message-success/message-su
 import { MessageErrorComponent } from './components/message-error/message-error.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ResetPasswordRequestComponent } from './components/reset-password-request/reset-password-request.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   { path: 'download', component: DownloadGameComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
   { path: 'signup', component:SignupComponent},
   { path: 'message-success', component:MessageSuccessComponent },
   { path: 'message-error', component:MessageErrorComponent},
+  { path: 'reset-password-request', component: ResetPasswordRequestComponent },
+  { path: 'reset-password', component:ResetPasswordComponent },
   { path: '', component:HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'requirements', component: RequerimentsComponent },

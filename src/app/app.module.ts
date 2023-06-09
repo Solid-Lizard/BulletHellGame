@@ -22,6 +22,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { NotPermissionsComponent } from './components/not-permissions/not-permissions.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ResetPasswordRequestComponent } from './components/reset-password-request/reset-password-request.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SignupComponent,
     NotPermissionsComponent,
     ProfileComponent,
+    ResetPasswordRequestComponent,
+    ResetPasswordComponent,
   
   ],
   imports: [
