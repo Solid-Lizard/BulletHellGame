@@ -1,21 +1,40 @@
 <div *ngIf="isLoggedIn" id="contenedor" class="form">
 
+  <h1 style="text-align: center; color: white; padding: 10px;">¡CONTÁCTANOS!</h1>
+
+  <p style="color: white; text-align: justify; padding: 20px;">En BulletHellGame valoramos tus comentarios y estamos aquí para
+    ayudarte. Si tienes alguna pregunta, sugerencia o simplemente quieres decirnos algo, no dudes en utilizar nuestro
+    formulario de contacto. Nos encantaría escuchar de ti y estaremos encantados de responder a tus inquietudes lo antes
+    posible.
+
+    Además, si encuentras algún error o bug en el juego, por favor, háznoslo saber para que podamos solucionarlo
+    rápidamente y brindarte la mejor experiencia de juego posible.
+
+    Tu opinión es importante para nosotros. ¡Nos esforzamos por ofrecerte un juego excepcional y queremos asegurarnos de
+    que tu voz sea escuchada!
+
+    Completa el formulario de contacto a continuación y nos pondremos en contacto contigo lo antes posible. ¡Gracias por
+    tu apoyo y por ser parte de la comunidad de BulletHellGame!</p>
+
   <form (ngSubmit)="submit()" #mailForm="ngForm">
     <div class="form-group">
       <label for="text">Asunto:</label>
-      <input type="text" class="form-control" [(ngModel)]="mail.subject" name="subject" #subject="ngModel" placeholder="Indica el asunto del mensaje" required maxlength="50">      
+      <input type="text" class="form-control" [(ngModel)]="mail.subject" name="subject" #subject="ngModel"
+        placeholder="Indica el asunto del mensaje" required maxlength="50">
       <div *ngIf="subject.invalid && subject.dirty" class="alert">
         <div *ngIf="subject.errors?.['required']">
           Campo requerido
         </div>
       </div>
-    
+
     </div>
 
     <div class="form-group">
       <label for="text">Mensaje:</label>
-      <textarea class="form-control" [(ngModel)]="mail.text" name="text" #text="ngModel" id="exampleFormControlTextarea1" placeholder="¡Escríbenos tu mensaje!" rows="3" required minlength="4"> </textarea>
-      
+      <textarea class="form-control" [(ngModel)]="mail.text" name="text" #text="ngModel"
+        id="exampleFormControlTextarea1" placeholder="¡Escríbenos tu mensaje!" rows="3" required minlength="4"
+        maxlength="4069"> </textarea>
+
       <div *ngIf="text.invalid && text.dirty" class="alert">
         <div *ngIf="text.errors?.['required']">
           Campo requerido
@@ -25,7 +44,7 @@
           Mínimo 4 caracteres
         </div>
       </div>
-   
+
     </div>
 
     <button class="btn btn-danger" type="submit" [disabled]="!mailForm.form.valid">Enviar</button>

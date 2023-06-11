@@ -1,29 +1,33 @@
-
 <header class="p-3 text-bg-dark">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/BulletHellGame/home" class="nav-link px-2">Principal</a></li>
-          <li><a href="/BulletHellGame/our-game" class="nav-link px-2 ">Características</a></li>
-          <li><a href="/BulletHellGame/requirements" class="nav-link px-2 ">Requisitos</a></li>
-          <li><a href="/BulletHellGame/download" class="nav-link px-2 " *ngIf="isLoggedIn">Descargar juego</a></li>
-          <li><a href="/BulletHellGame/about-us" class="nav-link px-2 " *ngIf="isLoggedIn">Sobre el equipo</a></li>
-          <li><a href="/BulletHellGame/social-media" class="nav-link px-2 ">¡Síguenos!</a></li>
-          <li><a href="/BulletHellGame/contact" class="nav-link px-2" *ngIf="isLoggedIn">¡Contáctanos!</a></li>
-        </ul>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/BulletHellGame/home" class="nav-link px-2">Principal</a></li>
+        <li><a href="/BulletHellGame/our-game" class="nav-link px-2 ">Características</a></li>
+        <li><a href="/BulletHellGame/requirements" class="nav-link px-2 ">Requisitos</a></li>
+        <li><a href="/BulletHellGame/download" class="nav-link px-2 " *ngIf="isLoggedIn">Descargar juego</a></li>
+        <li><a href="/BulletHellGame/about-us" class="nav-link px-2 " *ngIf="isLoggedIn">Sobre el equipo</a></li>
+        <li><a href="/BulletHellGame/social-media" class="nav-link px-2 ">¡Síguenos!</a></li>
+        <li><a href="/BulletHellGame/contact" class="nav-link px-2" *ngIf="isLoggedIn">¡Contáctanos!</a></li>
+        <li><a href="/BulletHellGame/profile" class="nav-link px-2" *ngIf="isLoggedIn">Tu perfil</a></li>
+        <li><a href="/BulletHellGame/admin-board" class="nav-link px-2" *ngIf="showAdminBoard"> Moderación </a> </li>
+      </ul>
 
-        <div class="text-end">
-          <a href="/BulletHellGame/login" class="btn btn-outline-light me-2" style="margin-right: 10px" *ngIf="!isLoggedIn">Login</a>
-          <a href="/BulletHellGame/signup" class="btn btn-danger" *ngIf="!isLoggedIn">Sign-up</a>
-          <a href class="btn btn-danger" (click)="logout()" *ngIf="isLoggedIn">LogOut</a>
-        </div>
+      <div class="text-end">
+        <a href="/BulletHellGame/login" class="btn btn-outline-light me-2" style="margin-right: 10px"
+          *ngIf="!isLoggedIn">Login</a>
+        <a href="/BulletHellGame/signup" class="btn btn-danger" *ngIf="!isLoggedIn">Sign-up</a>
+        <a href class="btn btn-danger" (click)="logout()" *ngIf="isLoggedIn">LogOut</a>
       </div>
     </div>
-  </header>
-
-  <div style="min-height: 500px;">
-    <router-outlet class="h-100"></router-outlet>    
   </div>
-  
+</header>
+
+<body>
+  <div style="min-height: 500px;">
+    <router-outlet class="h-100"></router-outlet>
+  </div>
+
   <app-footer></app-footer>
+</body>

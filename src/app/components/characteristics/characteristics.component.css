@@ -11,17 +11,10 @@ p {
     
 }
 
-.div1 {
-    background: url('/assets/images/image1.jpg') no-repeat; 
+.div1, .div2, .div3 {
+    border: 2px solid red;
 }
 
-.div2 {
-    
-}
-
-.div3 {
-
-}
 
 .content {
     color: white;

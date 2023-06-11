@@ -1,25 +1,35 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-    <header class="jumbotron">
+
+<a style="visibility: hidden;">t</a>
+<div class="container" *ngIf="isLoggedIn;" style="margin-bottom: 20px;">
+
+    <a style="display: none;">s</a>
+    <header class="alert">
+        <img class="rounded float-left"
+            src="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg">
+
         <h3>
-            <strong>{{ currentUser.username }}</strong> Perfil
+            ¡Bienvenido <strong>{{ currentUser.username }}</strong>!
         </h3>
     </header>
-    <p>
-        <strong>Token:</strong>
-        {{ currentUser.accessToken.substring(0, 20) }} ...
-        {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-    </p>
-    <p>
-        <strong>Email:</strong>
-        {{ currentUser.email }}
-    </p>
-    <strong>Roles:</strong>
-    <ul>
-        <li *ngFor="let role of currentUser.roles">
-            {{ role }}
-        </li>
-    </ul>
+
+    <div class="cuerpo">
+        <p>
+            <strong>Email:</strong>
+            {{ currentUser.email }}
+        </p>
+        <strong>Roles:</strong>
+        <ul>
+            <li *ngFor="let role of currentUser.roles">
+                {{ role }}
+            </li>
+        </ul>
+
+        <p style="text-align: justify; padding: 5px;">¡Encantad@ de tenerte con nosotros!, que estés registrado como usuario no significa solo que nos estés dando más apoyo y visiblidad a nuestra web, si no que además tienes distintas ventajas con respecto a otros usuarios, ¡en cualquier momento puedes acceder a todas las secciones de nuestra web, que contienen más información sobre nosotros tanto como detalles sobre nuestro juego!.</p>
+
+        <p style="text-align: justify; padding: 5px;"> También podrás acceder en cualquier momento a distintos servicios, como por ejemplo el formulario para contactar directamente con nosotros, o acceder al manual de instrucciones y archivos de descarga e instalación de nuestro juego. ¡Gracias por tu ayuda!</p>
+        
+
+    </div>
 </div>
-<ng-template #loggedOut>
-    Please login.
-</ng-template>
+
+<app-not-permissions *ngIf="!isLoggedIn"></app-not-permissions>

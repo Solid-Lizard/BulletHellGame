@@ -1,0 +1,23 @@
+
+    <div class="container" style="padding: 5px; " *ngIf="isAdmin">
+        <table class="table  table-stripped">
+            <thead class="bg-danger">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre de usuario</th>
+                    <th scope="col">Email</th>
+                    <th> Acciones </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let entity of entities" scope="row">
+                    <td>{{ entity.id }}</td>
+                    <td>{{ entity.username }}</td>
+                    <td>{{ entity.email }}</td>
+                    <td> <button (click)="deleteUser(entity.id)" class="btn btn-danger">Eliminar</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <app-not-permissions *ngIf="!isAdmin"></app-not-permissions>

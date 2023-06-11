@@ -9,7 +9,6 @@ import {Observable} from 'rxjs';
 export class MailServiceService {
 
   private apiUrl = 'https://bullethellgame-back-production.up.railway.app/email';
-  //private apiUrl = 'http://localhost:8080/email';
  
   constructor(private http: HttpClient) { }
 

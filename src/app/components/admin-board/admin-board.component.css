@@ -1,0 +1,15 @@
+tbody {
+    color: white;
+}
+
+td {
+    background-color:rgb(0, 0, 0);
+}
+
+thead {
+    color: black;
+}
+
+table {
+    border: 2px solid red;
+}
