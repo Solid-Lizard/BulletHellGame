@@ -1,0 +1,77 @@
+<a style="visibility: hidden;">t</a>
+<div class="container" *ngIf="isLoggedIn;" style="margin-bottom: 20px;">
+
+    <a style="display: none;">s</a>
+    <header class="alert">
+        <img class="rounded float-left"
+            src="https://static.vecteezy.com/system/resources/previews/008/442/086/original/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg">
+
+        <h3>
+            Edición de usuario
+        </h3>
+    </header>
+
+    <div class="cuerpo">
+        <p>
+            <strong>Email actual:</strong>
+            {{ currentUser.email }}
+        </p>
+
+        <p>
+            <strong>Nombre de usuario actual:</strong>
+            {{ currentUser.username }}
+        </p>
+
+        <strong>Roles:</strong>
+        <ul>
+            <li *ngFor="let role of currentUser.roles">
+                {{ role }}
+            </li>
+        </ul>
+
+        <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate style="margin: 10px;">
+            <div class="form-group">
+                <label for="username">Nuevo usuario</label>
+                <input type="text" class="form-control" name="username" [(ngModel)]="form.username" required
+                    minlength="3" maxlength="20" #username="ngModel" placeholder="Nombre de usuario" />
+                <div class="alert alert-danger" *ngIf="username.errors && f.submitted">
+                    <div *ngIf="username.errors?.['required']">El usuario es obligatorio</div>
+                    <div *ngIf="username.errors?.['minlength']">
+                        El usuario debe tener al menos 3 caracteres
+                    </div>
+                    <div *ngIf="username.errors?.['maxlength']">
+                        El usuario no puede tener más de 20 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Nuevo email</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email
+                    #email="ngModel" placeholder="Email" maxlength="320" />
+                <div class="alert alert-danger" *ngIf="email.errors && f.submitted">
+                    <div *ngIf="email.errors?.['required']">Email es obligatorio</div>
+                    <div *ngIf="email.errors?.['email']">
+                        Email debe ser una dirección de email válida
+                    </div>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <button class="btn btn-danger btn-block" style="color: white;">Confirmar edición</button>
+            </div>
+            <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+              ¡Algo ha salido mal!:<br />{{ errorMessage }}
+            </div>
+            
+        </form>
+
+        <div class="alert alert-success" *ngIf="profileUpdated">
+            ¡Su perfil ha sido actualizado!, porfavor, vuelva a iniciar sesión para que podamos recargar sus credenciales<br />
+        </div>
+
+    </div>
+</div>
+
+
+
+<app-not-permissions *ngIf="!isLoggedIn"></app-not-permissions>

@@ -25,6 +25,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ResetPasswordRequestComponent } from './components/reset-password-request/reset-password-request.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { AdminBoardComponent } from './components/admin-board/admin-board.component';
+import { EditProfileComponentComponent } from './components/edit-profile-component/edit-profile-component.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { AdminBoardComponent } from './components/admin-board/admin-board.compon
     ResetPasswordRequestComponent,
     ResetPasswordComponent,
     AdminBoardComponent,
+    EditProfileComponentComponent,
   
   ],
   imports: [

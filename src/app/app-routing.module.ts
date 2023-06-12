@@ -16,6 +16,7 @@ import { ResetPasswordRequestComponent } from './components/reset-password-reque
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { AdminBoardComponent } from './components/admin-board/admin-board.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditProfileComponentComponent } from './components/edit-profile-component/edit-profile-component.component';
 
 const routes: Routes = [
   { path: 'download', component: DownloadGameComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component:SignupComponent},
   { path: 'profile', component: ProfileComponent },
+  { path: 'edit-profile', component:EditProfileComponentComponent},
   { path: 'message-success', component:MessageSuccessComponent },
   { path: 'message-error', component:MessageErrorComponent},
   { path: 'reset-password-request', component: ResetPasswordRequestComponent },

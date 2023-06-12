@@ -1,0 +1,33 @@
+* {
+    color: black;
+}
+
+header {
+    margin: 7px;
+    margin-bottom: 0px;
+    border: 2px solid red;
+    background-color: red;
+}
+
+h3 {
+    padding-top: 55px;
+}
+
+h3, h3 strong {
+    color: black;
+}
+
+img {
+    height: 100px;
+    padding: 10px;    
+    
+}
+
+.cuerpo {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: rgb(231, 226, 226);
+    border: 2px solid rgb(231, 226, 226);     
+    border-radius: 2px;   
+}
